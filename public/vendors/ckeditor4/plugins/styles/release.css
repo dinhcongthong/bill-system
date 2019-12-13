@@ -1,0 +1,51 @@
+#detail-content * {
+	font-size: 18px;
+}
+
+#detail-content h2.h2-title {
+	font-size: 18px;
+	font-weight: bold;
+	position: relative;
+	background-color: #dfefff;
+	box-shadow: 0px 0px 0px 5px #dfefff;
+	border: dashed 2px white;
+	padding: 0.2em 0.5em;
+	color: #454545;
+	margin-bottom: 10px;
+}
+
+#detail-content h3.h3-title {
+	font-size: 18px;
+	font-weight: bold;
+	border-bottom: 3px solid #cce4ff;
+	position: relative;
+}
+
+#detail-content h3.h3-title:after {
+	position: absolute;
+	content: " ";
+	display: block;
+	border-bottom: solid 3px #5472cd;
+	bottom: -3px;
+	width: 20%;
+}
+
+#detail-content h4.h4-title {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#detail-content a {
+	color: #0000CD;
+}
+
+#detail-content table tr td {
+	border: 1px solid #333;
+}
+
+@media(max-width: 768px) {
+	#detail-content img {
+		width: 100% !important;
+		height: auto !important;
+	}
+}

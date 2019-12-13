@@ -1,0 +1,67 @@
+
+/* Bootstrap4 Dialog */
+.bootstrap-dialog-header {
+    width: 100%;
+}
+
+.bootstrap-dialog-footer-buttons button {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.contract-item {
+    counter-reset: index;
+}
+.contract-invoices-list {
+    counter-reset: index;
+}
+
+.invoice-item > a::after {
+    counter-increment: index;
+    content: 'Invoice #' counter(index);
+    font-weight: 500;
+    margin-left: 1.5rem;
+    color: var(--danger);
+}
+
+
+#tick-invoice {width: 10%; text-align: center;}
+#tick-invoice:hover {cursor: pointer;}
+#tick-exported-invoice:hover {cursor: pointer;}
+
+.service_index::before {
+    counter-increment: index;
+    content: '#' counter(index);
+}
+
+.btn-paid {color: green;}
+.btn-exported {color:green;}
+
+[id*=tick-]{
+    color: var(--secondary);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    white-space: nowrap;
+    margin-left: 1.5rem;
+}
+[id*=tick-]:hover{
+    font-weight: 500;
+}
+#tick-invoice::after{
+    content: 'Not paid yet';
+}
+#tick-invoice.active::after{
+    content: 'Paid';
+}
+#tick-receipt::after{
+    content: 'Red Invoice - NO';
+}
+#tick-receipt.active::after{
+    content: 'Red Invoice - YES';
+}
+[id*=tick-].active > i::before, [id*=tick-]:hover > i::before{
+    content: '\ec59';
+    color: var(--success) !important;
+}
+

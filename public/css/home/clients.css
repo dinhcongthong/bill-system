@@ -1,0 +1,578 @@
+#client-page-header{
+    max-height: calc(43px + 2rem);
+}
+.dropdown-menu, .tooltip{
+    transition: translate 0s;
+}
+#main-content-wrapper{
+    overflow-y: auto;
+}
+.client-item{
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    overflow: hidden;
+    border-top: 0;
+}
+.client-item:hover{
+    /* box-shadow: inset 1px 0 0 #dadce0,inset -1px 0 0 #dadce0,0 1px 2px 0 rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15); */
+    box-shadow: var(--shadow-sm);
+    z-index: 3;
+}
+.client-item .card-header{
+    z-index: 2;
+    margin-bottom: -1px;
+}
+.client-item.saved .card-header::before{
+    content: '[Ex Client]';
+    margin-right: .5rem;
+    font-weight: 500;
+    color: var(--success);
+}
+.client-item.saved .card-header{
+    color: var(--success);
+}
+.client-item.banned .card-header::before{
+    content: '[Banned]';
+    margin-right: .5rem;
+    font-weight: 500;
+    color: var(--danger);
+}
+.client-item.banned .card-header{
+    color: var(--danger);
+}
+.client-item .card-body{
+    background: var(--grey-dark);
+    max-height: 200px;
+    overflow-y: auto;
+}
+.client-item:first-child{
+    border-top-left-radius: .75rem; 
+    border-top-right-radius: .75rem;
+    border-top: 1px solid var(--border);
+}
+.client-item:last-child{
+    border-bottom-left-radius: .75rem; 
+    border-bottom-right-radius: .75rem;
+}
+.client-item:only-child{
+    border-radius: .75rem !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+.clients-list{
+    padding-bottom: 1rem;
+}
+/* @media (min-width: 576px){
+    .client-item{
+        flex: 0 0 280px;
+        width: 280px;
+        max-width: 280px;
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+} */
+
+.item-wrapper{
+    display: flex;
+    flex-direction: column;
+    border-radius: .25rem;
+    overflow: hidden;
+    background: #fff;  
+    max-height: 100%;
+    transition: .2s; 
+}
+.item-wrapper:hover{
+    box-shadow: var(--shadow);
+}
+
+.client-info{
+    flex-shrink: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+    background: var(--light);
+}
+.client-info:hover{
+    background: #fff;
+}
+.client-info .btn:focus, .client-info .btn:active{
+    box-shadow: none;
+}
+.client-info > h6{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 400;
+}
+.client-item[class*=active-] .client-info{
+    background: #fff;
+}
+.client-item[class*=active-] .client-info > h6{
+    font-weight: 700;
+}
+.client-info > h6 .badge{
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 2rem;
+    margin-right: 1rem;
+    transform: scaleY(2rem);
+}
+.client-item.banned .client-info{
+    background: var(--dark);
+}
+.client-item .client-info > h6{
+    cursor: pointer;
+}
+.client-item.banned .client-info > h6{
+    color: var(--danger);
+}
+
+#contract-collapse{
+    flex-grow: 1;
+    padding: 1rem 1rem 0;
+    overflow-y: auto;
+}
+.contract-item{
+    display: block;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    border-radius: .75rem;
+    background: #fff;
+}
+.contract-item:hover{
+    box-shadow: var(--shadow);
+    text-decoration: none;
+}
+.contract-item.expired{
+    transform: grayscale(0);
+}
+.contract-title{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 1rem 0;
+    margin: 0 1rem 0 0;
+}
+.contract-item.expired .contract-title{
+    color: rgba(0,0,0,.35) !important;
+}
+.invoice-item{
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--dark);
+    font-size: .9rem;
+}
+.invoice-item:hover{
+    background: var(--grey);
+    text-decoration: none;
+}
+[class*=invoice-status]{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 0 !important;
+}
+
+div[id*=group-]{ 
+    padding-bottom: 1rem;
+}
+div[id*=group-]::before{
+    display: block;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    color: rgba(0,0,0,.5);
+    text-transform: uppercase;
+    background: var(--grey);
+    z-index: 3;
+}
+div[id=group-no]::before{content: '#';}
+div[id=group-a]::before{content: 'a';}
+div[id=group-b]::before{content: 'b';}
+div[id=group-c]::before{content: 'c';}
+div[id=group-d]::before{content: 'd';}
+div[id=group-e]::before{content: 'e';}
+div[id=group-f]::before{content: 'f';}
+div[id=group-g]::before{content: 'g';}
+div[id=group-h]::before{content: 'h';}
+div[id=group-i]::before{content: 'i';}
+div[id=group-j]::before{content: 'j';}
+div[id=group-k]::before{content: 'k';}
+div[id=group-l]::before{content: 'l';}
+div[id=group-m]::before{content: 'm';}
+div[id=group-n]::before{content: 'n';}
+div[id=group-o]::before{content: 'o';}
+div[id=group-p]::before{content: 'p';}
+div[id=group-q]::before{content: 'q';}
+div[id=group-r]::before{content: 'r';}
+div[id=group-s]::before{content: 's';}
+div[id=group-t]::before{content: 't';}
+div[id=group-u]::before{content: 'u';}
+div[id=group-v]::before{content: 'v';}
+div[id=group-w]::before{content: 'w';}
+div[id=group-x]::before{content: 'x';}
+div[id=group-y]::before{content: 'y';}
+div[id=group-z]::before{content: 'z';}
+
+#alphabet-nav{
+    overflow-x: auto;
+}
+#alphabet-nav a{
+    font-weight: 500;
+}
+#alphabet-nav a.active{
+    background: var(--light);
+}
+#main-content-wrapper{
+    overflow-y:auto;
+    height: calc(100vh - 86px - 5rem);
+    scroll-behavior: smooth;
+    padding: 0 1rem;
+    margin: 0 -1rem;
+}
+
+/* .swiper-slide{
+    height: 0;
+}
+.swiper-slide.swiper-slide-active{
+    height: 100%;
+} */
+/* button client */
+.next-btn-client::before{
+    content: 'Next';
+}
+#contract-steps .next-btn-client.swiper-button-disabled::before{
+    content: 'Save Contract';
+}
+#client-steps .next-btn-client.swiper-button-disabled::before{
+    content: 'Save Client';
+}
+.prev-btn-client::before{
+    content: 'Back';
+}
+.next-btn-client, .prev-btn-client{
+    padding: .5rem 2rem;
+    border-radius: 5rem;
+    font-size: 1.125rem;
+    display: inline-block;
+    filter: grayscale(0);
+}
+.next-btn-client:hover, .prev-btn-client:hover{
+    filter: grayscale(.3);
+    box-shadow: var(--shadow);
+}
+.next-btn-client:focus, .next-btn-client:active, .prev-btn-client:focus, .prev-btn-client:active{
+    box-shadow: none;
+    border: none;
+    outline: 0;
+}
+.next-btn-client{
+    background: var(--primary);
+    color: #fff;
+}
+.next-btn-client.swiper-button-disabled{
+    background: var(--success);
+}
+.prev-btn-client{
+    background: var(--grey);
+}
+.prev-btn-client.swiper-button-disabled{
+    display: none;
+}
+/* end button client */
+
+/* button contract */
+
+.next-btn-contract::before{
+    content: 'Next';
+}
+#contract-steps .next-btn-contract.swiper-button-disabled::before{
+    content: 'Save Contract';
+}
+#client-steps .next-btn-contract.swiper-button-disabled::before{
+    content: 'Save Client';
+}
+.prev-btn-contract::before{
+    content: 'Back';
+}
+.next-btn-contract, .prev-btn-contract{
+    padding: .5rem 2rem;
+    border-radius: 5rem;
+    font-size: 1.125rem;
+    display: inline-block;
+    filter: grayscale(0);
+}
+.next-btn-contract:hover, .prev-btn-contract:hover{
+    filter: grayscale(.3);
+    box-shadow: var(--shadow);
+}
+.next-btn-contract:focus, .next-btn-contract:active, .prev-btn-contract:focus, .prev-btn-contract:active{
+    box-shadow: none;
+    border: none;
+    outline: 0;
+}
+.next-btn-contract{
+    background: var(--primary);
+    color: #fff;
+}
+.next-btn-contract.swiper-button-disabled{
+    background: var(--success);
+}
+.prev-btn-contract{
+    background: var(--grey);
+}
+.prev-btn-contract.swiper-button-disabled{
+    display: none;
+}
+/* end button contract */
+.progress{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 1.5rem;
+    font-weight: 700;
+    border-radius: 5rem;
+}
+.progress-bar{
+    flex: 1;
+    background-color: var(--danger);
+}
+.progress-bar-animated ~ .progress-bar{
+    background: rgba(0,0,0,.7);
+}
+
+
+.client-preview-container > div > span{
+    display: block;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    text-align: left;
+    font-size: 1.125rem;
+    text-align: left;
+    border-radius: .25rem;
+}
+.client-preview-container > div::before{
+    font-size: .9rem;
+    color: var(--secondary);
+}
+.client-preview-container > div.client-name::before{
+    content: 'Company Name:';
+}
+.client-preview-container > div.client-contact-person::before{
+    content: 'Contact Person:';
+}
+.client-preview-container > div.client-phone::before{
+    content: 'Phone:';
+}
+.client-preview-container > div.client-address::before{
+    content: 'Address:';
+}
+.client-preview-container > div.client-tax-code::before{
+    content: 'Tax Code:';
+}
+
+.btn-add-ads{
+    display: block;
+    color: rgba(0,0,0,.5);
+    padding: .5rem 1.5rem;
+    width: 100%;
+    border-radius: .25rem;
+    background: transparent;
+    border: 1px dashed var(--border);
+}
+.btn-add-ads:hover{
+    color: rgba(0,0,0,.85);
+}
+#ads-payment-vat{
+    width: 2rem;
+    height: 2rem;
+}
+
+.modal-xl{
+    max-height: calc(100vh - 3rem);
+}
+.modal-xl .swiper-container{
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+}
+.modal-xl .swiper-container .swiper-slide{
+    max-height: calc(100vh - 250px);
+    overflow-y: auto;
+}
+
+.drawer-container{
+    max-width: calc(43px + 2rem);
+    min-width: calc(43px + 2rem);
+    margin-left: calc(0px - 43px - 2rem);
+    background: linear-gradient(60deg, var(--poste), var(--primary));
+}
+.drawer-container.show{
+    max-width: 100vw;
+    min-width: 100vw;
+    margin-left: 0;
+}
+
+.btn-client-nav{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-radius: 5rem;
+    height: 42px;
+    padding: .5rem 0;
+    transition: padding 0s, margin 0s !important;
+    color: #fff;
+}
+.btn-client-nav > i{
+    margin: 0 10px;
+    font-size: 20px;
+}
+.btn-client-nav:hover{
+    background: #fff;
+    color: var(--dark);
+}
+.btn-client-nav.active{
+    background: var(--light);
+    font-weight: 500;
+    color: var(--dark);
+}
+.drawer-container .btn-client-nav{
+    justify-content: center;
+}
+#drawer-ctrl{
+    max-width: calc(43px + 2rem);
+}
+
+@media (min-width: 768px){
+    #drawer-ctrl{
+        min-width: 280px;
+    }
+    .drawer-container{
+        max-width: 280px;
+        min-width: 280px;
+    }
+    .drawer-container.show{
+        max-width: calc(43px + 2rem);
+        min-width: calc(43px + 2rem);
+    }
+    .drawer-container.show .btn-client-nav{
+        justify-content: center;
+    }
+    .drawer-container .btn-client-nav, .drawer-container.show:hover .btn-client-nav:hover{
+        justify-content: flex-start;
+    }
+    .drawer-container.show:hover .btn-client-nav:hover{
+        position: fixed;
+        box-shadow: var(--shadow-sm);
+        padding-right: 11px;
+    }
+    .drawer-container.show:hover .btn-client-nav:hover + *{
+        margin-top: 42px !important;
+    }
+    .drawer-container.show:hover .btn-client-nav:hover + .dropdown-divider{
+        margin-top: calc(.5rem + 42px) !important;
+    }
+    .client-sidenav > *{
+        transition: all .2s, margin 0s;
+    }
+    /* .drawer-container.show:hover{
+        max-width: 280px;
+        min-width: 280px;
+        position: absolute;
+        left: 0;
+        top: calc(43px + 2rem);
+        bottom: 0;
+        z-index: 10;
+        box-shadow: var(--shadow-sm);
+    } */
+    .drawer-container, .drawer-container.show{
+        margin-left: 0;
+    }
+}
+
+#client-page-header #user-option::after{
+    content: none;
+}
+.sub-menu-btn:hover .dropdown-submenu{
+    display: block;
+    transform: translateX(1px);
+}
+.no-item{
+    position: relative;
+}
+.no-item::before{
+    content: 'No contract';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    padding: 1rem;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(0,0,0,.35);
+    background: var(--grey-dark);
+}
+.client-btn-group{
+    display: none;
+}
+.client-info:hover .client-btn-group{
+    display: flex;
+}
+.client-info:hover .client-numbers-of-contract{
+    display: none;
+}
+
+.contract-btn-group{
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    z-index: 5;
+    background: linear-gradient(to right, #fff 25%, rgba(255,255,255,0));
+}
+.contract-item-header:hover .contract-btn-group{
+    display: flex;
+}
+.no-transition, .no-transition *{
+    transition: all 0s !important;
+}
+
+.contract-item-header #contract-info-list{
+    position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+    right: 0;
+}
+#contract-info-list li{
+    width: auto;
+    border: 0; 
+    border-left: 1px solid var(--border);
+    border-radius: 0;
+    padding: 0 calc((100vw - 280px) / 1920 * 21);
+}
+#contract-info-list li strong{
+    font-size: 80%;
+    font-weight: 600;
+    color: rgba(0,0,0,.35);
+}
+
+.badge-paid{
+    color: var(--light) !important;
+    background-color: #ccc !important;
+}

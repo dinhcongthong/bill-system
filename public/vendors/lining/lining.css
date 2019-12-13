@@ -1,0 +1,129 @@
+.poem .line, .poem[data-lining]{
+	opacity: 0;
+}
+.poem[data-lining=end], .poem.max-line .line, .poem.max-line-1 .line:nth-of-type(-n+1), .poem.max-line-2 .line:nth-of-type(-n+2), .poem.max-line-3 .line:nth-of-type(-n+3), .poem.max-line-4 .line:nth-of-type(-n+4), .poem.max-line-5 .line:nth-of-type(-n+5), .poem.max-line-6 .line:nth-of-type(-n+6), .poem.max-line-7 .line:nth-of-type(-n+7), .poem.max-line-8 .line:nth-of-type(-n+8), .poem.max-line-9 .line:nth-of-type(-n+9), .poem.max-line-10 .line:nth-of-type(-n+10){
+	opacity: 1;
+	display: inline !important;
+}
+
+@media (min-width: 576px){
+	.poem[data-lining=end], .poem.max-sm-line .line, .poem.max-sm-line-1 .line:nth-of-type(-n+1), .poem.max-sm-line-2 .line:nth-of-type(-n+2), .poem.max-sm-line-3 .line:nth-of-type(-n+3), .poem.max-sm-line-4 .line:nth-of-type(-n+4), .poem.max-sm-line-5 .line:nth-of-type(-n+5), .poem.max-sm-line-6 .line:nth-of-type(-n+6), .poem.max-sm-line-7 .line:nth-of-type(-n+7), .poem.max-sm-line-8 .line:nth-of-type(-n+8), .poem.max-sm-line-9 .line:nth-of-type(-n+9), .poem.max-sm-line-10 .line:nth-of-type(-n+10){
+		opacity: 1;
+		display: inline !important;
+	}
+}
+
+@media (min-width: 768px){
+	.poem[data-lining=end], .poem.max-md-line .line, .poem.max-md-line-1 .line:nth-of-type(-n+1), .poem.max-md-line-2 .line:nth-of-type(-n+2), .poem.max-md-line-3 .line:nth-of-type(-n+3), .poem.max-md-line-4 .line:nth-of-type(-n+4), .poem.max-md-line-5 .line:nth-of-type(-n+5), .poem.max-md-line-6 .line:nth-of-type(-n+6), .poem.max-md-line-7 .line:nth-of-type(-n+7), .poem.max-md-line-8 .line:nth-of-type(-n+8), .poem.max-md-line-9 .line:nth-of-type(-n+9), .poem.max-md-line-10 .line:nth-of-type(-n+10){
+		opacity: 1;
+		display: inline !important;
+	}
+}
+
+@media (min-width: 992px){
+	.poem[data-lining=end], .poem.max-lg-line .line, .poem.max-lg-line-1 .line:nth-of-type(-n+1), .poem.max-lg-line-2 .line:nth-of-type(-n+2), .poem.max-lg-line-3 .line:nth-of-type(-n+3), .poem.max-lg-line-4 .line:nth-of-type(-n+4), .poem.max-lg-line-5 .line:nth-of-type(-n+5), .poem.max-lg-line-6 .line:nth-of-type(-n+6), .poem.max-lg-line-7 .line:nth-of-type(-n+7), .poem.max-lg-line-8 .line:nth-of-type(-n+8), .poem.max-lg-line-9 .line:nth-of-type(-n+9), .poem.max-lg-line-10 .line:nth-of-type(-n+10){
+		opacity: 1;
+		display: inline !important;
+	}
+}
+
+@media (min-width: 1200px){
+	.poem[data-lining=end], .poem.max-xl-line .line, .poem.max-xl-line-1 .line:nth-of-type(-n+1), .poem.max-xl-line-2 .line:nth-of-type(-n+2), .poem.max-xl-line-3 .line:nth-of-type(-n+3), .poem.max-xl-line-4 .line:nth-of-type(-n+4), .poem.max-xl-line-5 .line:nth-of-type(-n+5), .poem.max-xl-line-6 .line:nth-of-type(-n+6), .poem.max-xl-line-7 .line:nth-of-type(-n+7), .poem.max-xl-line-8 .line:nth-of-type(-n+8), .poem.max-xl-line-9 .line:nth-of-type(-n+9), .poem.max-xl-line-10 .line:nth-of-type(-n+10){
+		opacity: 1;
+		display: inline !important;
+	}
+}
+
+
+.poem.max-line-1 .line:nth-of-type(1)::after, 
+.poem.max-line-2 .line:nth-of-type(2)::after, 
+.poem.max-line-3 .line:nth-of-type(3)::after, 
+.poem.max-line-4 .line:nth-of-type(4)::after, 
+.poem.max-line-5 .line:nth-of-type(5)::after,
+.poem.max-line-6 .line:nth-of-type(6)::after, 
+.poem.max-line-7 .line:nth-of-type(7)::after, 
+.poem.max-line-8 .line:nth-of-type(8)::after, 
+.poem.max-line-9 .line:nth-of-type(9)::after, 
+.poem.max-line-10 .line:nth-of-type(10)::after{
+	content: "...";
+}
+
+
+@media (min-width: 576px){
+	.poem[class*=max-sm-line-] .line:nth-of-type(n)::after{
+		content: none;
+	}
+	.poem.max-sm-line-1 .line:nth-of-type(1)::after, 
+	.poem.max-sm-line-2 .line:nth-of-type(2)::after, 
+	.poem.max-sm-line-3 .line:nth-of-type(3)::after, 
+	.poem.max-sm-line-4 .line:nth-of-type(4)::after, 
+	.poem.max-sm-line-5 .line:nth-of-type(5)::after,
+	.poem.max-sm-line-6 .line:nth-of-type(6)::after, 
+	.poem.max-sm-line-7 .line:nth-of-type(7)::after, 
+	.poem.max-sm-line-8 .line:nth-of-type(8)::after, 
+	.poem.max-sm-line-9 .line:nth-of-type(9)::after, 
+	.poem.max-sm-line-10 .line:nth-of-type(10)::after{
+		content: "...";
+	}
+}
+
+@media (min-width: 768px){
+	.poem[class*=max-md-line-] .line:nth-of-type(n)::after{
+		content: none;
+	}
+	.poem.max-md-line-1 .line:nth-of-type(1)::after, 
+	.poem.max-md-line-2 .line:nth-of-type(2)::after, 
+	.poem.max-md-line-3 .line:nth-of-type(3)::after, 
+	.poem.max-md-line-4 .line:nth-of-type(4)::after, 
+	.poem.max-md-line-5 .line:nth-of-type(5)::after,
+	.poem.max-md-line-6 .line:nth-of-type(6)::after, 
+	.poem.max-md-line-7 .line:nth-of-type(7)::after, 
+	.poem.max-md-line-8 .line:nth-of-type(8)::after, 
+	.poem.max-md-line-9 .line:nth-of-type(9)::after, 
+	.poem.max-md-line-10 .line:nth-of-type(10)::after{
+		content: "...";
+	}
+}
+
+@media (min-width: 992px){
+	.poem[class*=max-lg-line-] .line:nth-of-type(n)::after{
+		content: none;
+	}
+	.poem.max-lg-line-1 .line:nth-of-type(1)::after, 
+	.poem.max-lg-line-2 .line:nth-of-type(2)::after, 
+	.poem.max-lg-line-3 .line:nth-of-type(3)::after, 
+	.poem.max-lg-line-4 .line:nth-of-type(4)::after, 
+	.poem.max-lg-line-5 .line:nth-of-type(5)::after,
+	.poem.max-lg-line-6 .line:nth-of-type(6)::after, 
+	.poem.max-lg-line-7 .line:nth-of-type(7)::after, 
+	.poem.max-lg-line-8 .line:nth-of-type(8)::after, 
+	.poem.max-lg-line-9 .line:nth-of-type(9)::after, 
+	.poem.max-lg-line-10 .line:nth-of-type(10)::after{
+		content: "...";
+	}
+}
+
+@media (min-width: 1200px){
+	.poem[class*=max-xl-line-] .line:nth-of-type(n)::after{
+		content: none;
+	}
+	.poem.max-xl-line-1 .line:nth-of-type(1)::after, 
+	.poem.max-xl-line-2 .line:nth-of-type(2)::after, 
+	.poem.max-xl-line-3 .line:nth-of-type(3)::after, 
+	.poem.max-xl-line-4 .line:nth-of-type(4)::after, 
+	.poem.max-xl-line-5 .line:nth-of-type(5)::after,
+	.poem.max-xl-line-6 .line:nth-of-type(6)::after, 
+	.poem.max-xl-line-7 .line:nth-of-type(7)::after, 
+	.poem.max-xl-line-8 .line:nth-of-type(8)::after, 
+	.poem.max-xl-line-9 .line:nth-of-type(9)::after, 
+	.poem.max-xl-line-10 .line:nth-of-type(10)::after{
+		content: "...";
+	}
+}
+
+.poem .line[last]::after{
+	content: none !important;
+}
+.line{
+	font-size: inherit !important;
+}
